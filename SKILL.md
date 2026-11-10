@@ -1,7 +1,7 @@
 ---
 name: memory-digest
 version: 1.1.0
-description: Generate human-readable weekly/monthly reports from an AI agent's memory corpus. Use when the user asks "what did my agent do this week", "generate a work report", "记忆周报", "述职报告", "weekly digest", "monthly summary of agent activity", or when a periodic review of agent work is wanted. Reads date-named daily memory logs and produces a digest with activity timeline, project momentum, open threads, and metric changes.
+description: Generate human-readable weekly/monthly reports from an AI agent's memory corpus. Use when the user asks "what did my agent do this week", "generate a work report", "memory weekly report", "work report", "weekly digest", "monthly summary of agent activity", or when a periodic review of agent work is wanted. Reads date-named daily memory logs and produces a digest with activity timeline, project momentum, open threads, and metric changes.
 ---
 
 # Memory Digest
@@ -11,28 +11,28 @@ Turn an agent's daily memory logs into a report a human actually wants to read: 
 Most memory tooling stores and retrieves for the agent. This skill reads the same corpus *for the owner*.
 
 
-## Onboarding（首次使用）
+## Onboarding (First Use)
 
-当用户第一次触发本 skill 且 `memory/memory_digest_state.json` 不存在时，执行一次性引导：
+When the user first triggers this skill and `memory/memory_digest_state.json` doesn't exist, run a one-time setup:
 
-1. **介绍能力**（一句话）：_"我可以从 agent 的记忆库自动生成周报/月报——做了什么、决定了什么、发布了什么。"_
+1. **Introduce capability** (one sentence): _"I can auto-generate weekly/monthly reports from your agent's memory — what was done, decided, and shipped."_
 
-2. **快速配置：**
+2. **Quick configuration:**
 
-1. **报告周期**（默认：周报）
-   - 周报（每周汇总）
-   - 月报（每月汇总）
-2. **报告语言**（默认：跟随用户输入语言）
-   - 中文
+1. **Report period**(Default: Weekly)
+   - Weekly (weekly summary)
+   - Monthly (monthly summary)
+2. **Report language**(Default: Follow user input language)
+   - Chinese
    - English
-   - 跟随用户输入语言
-3. **是否自动发送**（默认：是，生成后直接发给用户）
+   - Follow user input language
+3. **Auto-send**(Default: Yes, deliver to user after generation)
 
-3. **写入初始状态文件** `memory/memory_digest_state.json`（JSON 格式，含 `onboarded: true` 和时间戳）
+3. **Write initial state file** `memory/memory_digest_state.json`(JSON format, with `onboarded: true` and timestamp)
 
-4. **确认完成**：_"设置完成！以后直接用就行。随时可以说'reset settings'重新配置。"_
+4. **Confirm completion**: _"Setup done! Just use it from now on. Say 'reset settings' anytime to reconfigure."
 
-**Onboarding 只执行一次**，后续每次激活直接读取状态文件。用户说 "reset settings" 时删除状态文件重新引导。
+**Onboarding runs exactly once.** Subsequent activations read the state file directly. When the user says "reset settings", delete the state file and re-run setup.
 
 ---
 
