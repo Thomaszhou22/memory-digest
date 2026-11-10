@@ -1,5 +1,6 @@
 ---
 name: memory-digest
+version: 1.1.0
 description: Generate human-readable weekly/monthly reports from an AI agent's memory corpus. Use when the user asks "what did my agent do this week", "generate a work report", "记忆周报", "述职报告", "weekly digest", "monthly summary of agent activity", or when a periodic review of agent work is wanted. Reads date-named daily memory logs and produces a digest with activity timeline, project momentum, open threads, and metric changes.
 ---
 
