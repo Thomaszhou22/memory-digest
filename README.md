@@ -1,5 +1,7 @@
 # Memory Digest
 
+[![ClawHub](https://img.shields.io/badge/ClawHub-install-orange)](https://clawhub.ai/thomaszhou22/memory-digest)
+
 **Weekly reports from your AI agent's memory — for the human who owns it.**
 
 [English](./README.md) | [中文](./README_CN.md)
